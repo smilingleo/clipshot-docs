@@ -1,6 +1,7 @@
 # ClipShot Documentation Site
 
 This public repository contains the GitHub Pages website for ClipShot.
+Showcase screenshots and videos live in `assets/screenshots/`.
 
 Site URL:
 

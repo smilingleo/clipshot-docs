@@ -16,7 +16,9 @@
     <nav aria-label="Documentation">
       <a href="#start">Start</a>
       <a href="#hotkeys">Hotkeys</a>
-      <a href="#workflows">Workflows</a>
+      <a href="#showcases">Showcases</a>
+      <a href="#scroll-capture">Scroll Capture</a>
+      <a href="#recording">Recording</a>
       <a href="#tools">Tools</a>
       <a href="#store">StoreKit</a>
     </nav>
@@ -30,20 +32,13 @@
         <p class="lead">ClipShot helps teams turn screen evidence into clear feedback. Screenshot capture is free; screen recording and scroll capture unlock through a StoreKit trial or full purchase.</p>
         <div class="actions">
           <a class="button primary" href="#start">Get started</a>
-          <a class="button secondary" href="#workflows">View workflows</a>
+          <a class="button secondary" href="#showcases">View examples</a>
         </div>
       </div>
-      <div class="demo" aria-label="ClipShot annotation preview">
-        <div class="demo-bar"><span></span><span></span><span></span><strong>ClipShot</strong></div>
-        <div class="demo-canvas">
-          <div class="selection">
-            <div class="arrow"></div>
-            <div class="callout">Fix alignment</div>
-            <div class="step">1</div>
-          </div>
-        </div>
-        <div class="demo-timeline"><span></span><span class="active"></span><span></span></div>
-      </div>
+      <figure class="hero-media">
+        <img src="assets/screenshots/3-recording-poster.png" alt="ClipShot recording annotation preview with a highlighted repository row." loading="eager">
+        <figcaption>Highlight what matters, then export a recording or a stitched screenshot.</figcaption>
+      </figure>
     </section>
 
     <section id="start" class="section">
@@ -78,21 +73,143 @@
       </div>
     </section>
 
-    <section id="workflows" class="section">
-      <p class="eyebrow">Workflows</p>
-      <h2>Capture flows</h2>
+    <section id="showcases" class="section">
+      <p class="eyebrow">Showcases</p>
+      <h2>What ClipShot is for</h2>
+      <div class="showcase-grid">
+        <article class="case-card">
+          <figure class="case-media">
+            <img src="assets/screenshots/2-2-capture-annotate.png" alt="A captured region with ClipShot annotation tools visible." loading="lazy">
+          </figure>
+          <div>
+            <h3>Capture and explain a single issue</h3>
+            <p>Use a screenshot when one static view is enough. Select the region, add an arrow, rectangle, callout, text, blur, or numbered steps, then copy or save the annotated PNG.</p>
+          </div>
+        </article>
+        <article class="case-card">
+          <figure class="case-media">
+            <img src="assets/screenshots/4-scrolling.png" alt="A long stitched GitHub Trending page captured with ClipShot scroll capture." loading="lazy">
+          </figure>
+          <div>
+            <h3>Capture long content in one image</h3>
+            <p>Use scroll capture for pages, lists, logs, and documents that do not fit on screen. ClipShot scrolls the selected content, stitches the frames, and opens the result for annotation.</p>
+          </div>
+        </article>
+        <article class="case-card">
+          <figure class="case-media">
+            <img src="assets/screenshots/3-recording.png" alt="ClipShot recording editor with timeline controls and an annotation selected." loading="lazy">
+          </figure>
+          <div>
+            <h3>Record behavior, then call out moments</h3>
+            <p>Use recording when movement matters. Add annotations after capture, control when they appear, hold important frames, add pulse emphasis, and export a clean MP4.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="scroll-capture" class="section feature-section">
+      <div class="feature-copy">
+        <p class="eyebrow">Scroll Capture</p>
+        <h2>Turn long pages into one annotated image</h2>
+        <p class="body-copy">Scroll capture is designed for bug reports and review notes where the relevant context spans beyond the viewport: dashboards, repository lists, settings pages, chat threads, terminal output, and documentation pages.</p>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Select the scrollable area</h3>
+            <p>Press the scroll capture hotkey, drag around the content column, and keep the target app visible.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Let ClipShot stitch</h3>
+            <p>ClipShot scrolls, captures overlapping frames, detects matching rows, and creates one tall image.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Annotate the stitched result</h3>
+            <p>Use rectangles for affected regions, arrows for exact targets, blur for sensitive data, and steps for ordered review notes.</p>
+          </article>
+        </div>
+      </div>
+      <figure class="large-media tall-media">
+        <img src="assets/screenshots/4-scrolling.png" alt="A stitched long scroll capture of GitHub Trending." loading="lazy">
+        <figcaption>A stitched GitHub Trending page captured as one image.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section annotation-guide">
+      <p class="eyebrow">Scroll Capture Annotation Pattern</p>
+      <h2>How to mark long content clearly</h2>
       <div class="grid three">
         <article class="panel">
-          <h3>Screenshot</h3>
-          <ol><li>Press the screenshot hotkey.</li><li>Select a region.</li><li>Annotate in place.</li><li>Copy or save as PNG.</li></ol>
+          <h3>Use numbered steps for sequence</h3>
+          <p>Place step markers next to the important rows or sections so the reviewer can scan the long image without losing order.</p>
         </article>
         <article class="panel">
-          <h3>Recording</h3>
-          <ol><li>Select a recording area.</li><li>Stop from the menu bar.</li><li>Edit with timeline annotations.</li><li>Export MP4.</li></ol>
+          <h3>Use rectangles for region boundaries</h3>
+          <p>Frame each affected block instead of underlining text. It stays readable when the image is zoomed out.</p>
         </article>
         <article class="panel">
-          <h3>Scroll capture</h3>
-          <ol><li>Select scrollable content.</li><li>ClipShot scrolls and captures frames.</li><li>Frames are stitched into one image.</li><li>Annotate the final PNG.</li></ol>
+          <h3>Use blur before sharing</h3>
+          <p>Blur tokens, user data, or internal URLs directly on the stitched image before copying or saving it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="recording" class="section feature-section reverse">
+      <div class="feature-copy">
+        <p class="eyebrow">Recording</p>
+        <h2>Add annotations after recording, not while rushing</h2>
+        <p class="body-copy">Recording captures the cursor and click ripples, then opens a frame editor where annotations can be timed to the exact moment they matter.</p>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Select and record</h3>
+            <p>Press the recording hotkey, drag the region, perform the workflow, then stop from the menu bar or hotkey.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Place lifecycle annotations</h3>
+            <p>Select an annotation and use the mini bar to control its start and end frames. Extend the end marker when the target stays relevant longer.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Emphasize and shorten</h3>
+            <p>Add pulse when the viewer needs to notice an element, insert a hold on a keyframe, or increase playback speed for long quiet sections.</p>
+          </article>
+        </div>
+      </div>
+      <figure class="large-media">
+        <img src="assets/screenshots/3-recording.png" alt="ClipShot recording editor with a timed rectangle annotation selected." loading="lazy">
+        <figcaption>The recording editor shows annotation spans, speed, total time, and per-annotation lifecycle controls.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section video-demo">
+      <div>
+        <p class="eyebrow">Recording Annotation Example</p>
+        <h2>Pulse draws attention without adding extra shapes</h2>
+        <p class="body-copy">Pulse applies a breathing scale and glow to the original annotation. It works for arrows, rectangles, callouts, text, and other annotation types without adding a separate circle or extra bounds.</p>
+      </div>
+      <video controls muted playsinline preload="metadata" poster="assets/screenshots/3-recording-poster.png">
+        <source src="assets/screenshots/3-1-recording-pulse.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section class="section annotation-guide">
+      <p class="eyebrow">Recording Annotation Pattern</p>
+      <h2>How to make videos easier to understand</h2>
+      <div class="grid three">
+        <article class="panel">
+          <h3>Keep spans short</h3>
+          <p>Show an annotation only while the target is relevant. This keeps the viewer focused on the current action.</p>
+        </article>
+        <article class="panel">
+          <h3>Hold important frames</h3>
+          <p>Insert a hold when the viewer needs time to read a state, compare values, or understand the result of a click.</p>
+        </article>
+        <article class="panel">
+          <h3>Use speed deliberately</h3>
+          <p>Speed up repetitive waiting, slow down dense interactions, and let annotation spans follow the adjusted timeline.</p>
         </article>
       </div>
     </section>

@@ -83,6 +83,37 @@ h3 { margin-bottom: 12px; font-size: 1.04rem; letter-spacing: 0; }
 .button.primary { border-color: var(--teal); background: var(--teal); color: #fff; }
 .button.secondary { background: #fff; }
 
+.hero-media,
+.large-media,
+.case-media,
+.video-demo video {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.hero-media img,
+.large-media img,
+.case-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-media figcaption,
+.large-media figcaption {
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+.hero-media img {
+  aspect-ratio: 1.08 / 1;
+  object-fit: cover;
+  object-position: top left;
+}
+
 .demo {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -174,6 +205,93 @@ h3 { margin-bottom: 12px; font-size: 1.04rem; letter-spacing: 0; }
 .grid { display: grid; gap: 16px; }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.case-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.case-card > div { padding: 18px; }
+.case-card p { margin-bottom: 0; color: var(--muted); }
+.case-media {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+.case-media img {
+  aspect-ratio: 1.35 / 1;
+  object-fit: cover;
+  object-position: top left;
+}
+.feature-section {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr);
+  align-items: start;
+  gap: clamp(24px, 5vw, 56px);
+}
+.feature-section.reverse {
+  grid-template-columns: minmax(420px, 1.08fr) minmax(0, .92fr);
+}
+.feature-section.reverse .feature-copy { order: 2; }
+.feature-section.reverse .large-media { order: 1; }
+.feature-copy .body-copy { margin-bottom: 22px; }
+.steps {
+  display: grid;
+  gap: 12px;
+}
+.steps article {
+  position: relative;
+  min-height: 98px;
+  padding: 16px 16px 16px 58px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.steps span {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 900;
+}
+.steps h3 { margin-bottom: 4px; }
+.steps p { margin-bottom: 0; color: var(--muted); }
+.large-media img {
+  max-height: 720px;
+  object-fit: contain;
+  background: #f1f5f5;
+}
+.tall-media img {
+  max-height: 780px;
+  object-position: top center;
+}
+.annotation-guide h2 { max-width: 760px; }
+.video-demo {
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(420px, 1.25fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 56px);
+}
+.video-demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .panel, .table-wrap {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -208,14 +326,26 @@ footer a { color: var(--teal-dark); font-weight: 800; }
 @media (max-width: 880px) {
   .site-header { align-items: flex-start; flex-direction: column; }
   .hero { min-height: auto; grid-template-columns: 1fr; }
-  .demo { order: -1; }
+  .hero-media, .demo { order: -1; }
   .grid.two, .grid.three { grid-template-columns: 1fr; }
+  .showcase-grid,
+  .feature-section,
+  .feature-section.reverse,
+  .video-demo {
+    grid-template-columns: 1fr;
+  }
+  .feature-section.reverse .feature-copy,
+  .feature-section.reverse .large-media {
+    order: initial;
+  }
 }
 @media (max-width: 560px) {
   main, footer { width: min(100% - 28px, 1120px); }
   .site-header { padding: 12px 14px; }
+  nav a { padding: 7px 10px; }
   .demo-canvas { min-height: 260px; padding: 24px; }
   .selection { height: 190px; }
   .callout { right: 14px; top: 76px; max-width: 130px; }
   .arrow { left: 34px; width: 110px; }
+  .steps article { padding-right: 14px; }
 }
