@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ClipShot documentation for screenshots, annotations, screen recording, and scroll capture on macOS.">
+  <title>ClipShot Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <img src="assets/statusbar_icon.png" alt="" width="42" height="42">
+      <span>ClipShot Docs</span>
+    </a>
+    <nav aria-label="Documentation">
+      <a href="#start">Start</a>
+      <a href="#hotkeys">Hotkeys</a>
+      <a href="#workflows">Workflows</a>
+      <a href="#tools">Tools</a>
+      <a href="#store">StoreKit</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">macOS menu bar capture utility</p>
+        <h1>Capture, annotate, record, and explain screen context quickly.</h1>
+        <p class="lead">ClipShot helps teams turn screen evidence into clear feedback. Screenshot capture is free; screen recording and scroll capture unlock through a StoreKit trial or full purchase.</p>
+        <div class="actions">
+          <a class="button primary" href="#start">Get started</a>
+          <a class="button secondary" href="#workflows">View workflows</a>
+        </div>
+      </div>
+      <div class="demo" aria-label="ClipShot annotation preview">
+        <div class="demo-bar"><span></span><span></span><span></span><strong>ClipShot</strong></div>
+        <div class="demo-canvas">
+          <div class="selection">
+            <div class="arrow"></div>
+            <div class="callout">Fix alignment</div>
+            <div class="step">1</div>
+          </div>
+        </div>
+        <div class="demo-timeline"><span></span><span class="active"></span><span></span></div>
+      </div>
+    </section>
+
+    <section id="start" class="section">
+      <p class="eyebrow">Start</p>
+      <h2>Install and launch</h2>
+      <div class="grid two">
+        <article class="panel">
+          <h3>Build locally</h3>
+          <pre><code>cargo build --release
+./target/release/clipshot</code></pre>
+          <p>ClipShot launches as a menu bar app without a Dock icon.</p>
+        </article>
+        <article class="panel">
+          <h3>Permissions</h3>
+          <p>Screen Recording permission is required for selected-region capture. Accessibility is only used for scroll capture when the target app needs synthetic scroll input.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="hotkeys" class="section">
+      <p class="eyebrow">Reference</p>
+      <h2>Global hotkeys</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Hotkey</th><th>Action</th><th>Availability</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>A</kbd></td><td>Capture screenshot</td><td>Free</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>Z</kbd></td><td>Start or stop screen recording</td><td>Trial / full unlock</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>S</kbd></td><td>Start or stop scroll capture</td><td>Trial / full unlock</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="workflows" class="section">
+      <p class="eyebrow">Workflows</p>
+      <h2>Capture flows</h2>
+      <div class="grid three">
+        <article class="panel">
+          <h3>Screenshot</h3>
+          <ol><li>Press the screenshot hotkey.</li><li>Select a region.</li><li>Annotate in place.</li><li>Copy or save as PNG.</li></ol>
+        </article>
+        <article class="panel">
+          <h3>Recording</h3>
+          <ol><li>Select a recording area.</li><li>Stop from the menu bar.</li><li>Edit with timeline annotations.</li><li>Export MP4.</li></ol>
+        </article>
+        <article class="panel">
+          <h3>Scroll capture</h3>
+          <ol><li>Select scrollable content.</li><li>ClipShot scrolls and captures frames.</li><li>Frames are stitched into one image.</li><li>Annotate the final PNG.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <p class="eyebrow">Annotation</p>
+      <h2>Tools and styling</h2>
+      <div class="chips">
+        <span>Arrow</span><span>Rectangle</span><span>Ellipse</span><span>Pencil</span><span>Text</span><span>Callout</span><span>Highlight</span><span>Blur</span><span>Step</span><span>Crop</span>
+      </div>
+      <p class="body-copy">Drawable tools use color swatches and stroke presets. Text annotations use color and font-size controls. Selecting an existing annotation activates the matching tool and style controls so it can be edited directly.</p>
+    </section>
+
+    <section id="store" class="section">
+      <p class="eyebrow">App Store model</p>
+      <h2>Trial and unlock</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>Free</th><th>Trial / full unlock</th></tr></thead>
+          <tbody>
+            <tr><td>Screenshot capture</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Screen recording</td><td>Locked after trial</td><td>Yes</td></tr>
+            <tr><td>Scroll capture</td><td>Locked after trial</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="body-copy">The App Store build uses StoreKit product IDs <code>clipshot.trial.14days</code> and <code>clipshot.full_unlock</code>. No registration server is required.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>ClipShot Documentation</span>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
